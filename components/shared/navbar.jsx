@@ -2,7 +2,12 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div
+      className="navbar  fixed  bg-base-100"
+      style={{
+        zIndex: "1030",
+      }}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-xs lg:hidden">
@@ -75,27 +80,29 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a className="text-violet-800 text-[24px] font-extrabold">NFTERS</a>
+            <a className="text-violet-800 text-[24px] font-extrabold btn-sm my-auto ">
+              NFTERS
+            </a>
           </li>
-          <li className="btn btn-ghost text-xs px-2 btn-sm xl:btn-lg xl:px-4 xl:text-xl my-auto">
+          <li className="btn btn-ghost text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case rounded-full">
             Marketplace
           </li>
-          <li className=" btn btn-ghost text-xs px-2 btn-sm xl:btn-lg xl:px-4 xl:text-xl my-auto">
+          <li className=" btn btn-ghost text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case rounded-full">
             Resource
           </li>
-          <li className="btn btn-ghost text-xs px-2 btn-sm xl:btn-lg xl:px-4 xl:text-xl my-auto">
+          <li className="btn btn-ghost text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case rounded-full">
             About
           </li>
-          <div class="pt-2  relative  text-gray-600">
+          <div class="pt-2 xl:pt-0  relative  text-gray-600">
             <input
-              class="border-2 border-gray-300 bg-white h-10 xl:h-12 px-5 pr-16 rounded-full text-sm focus:outline-none"
+              class="border-2 border-gray-300 bg-white h-10 xl:h-8 px-5 pr-16 rounded-full text-sm focus:outline-none"
               type="search"
               name="search"
               placeholder="Search"
             />
             <button
               type="submit"
-              class="absolute right-0 top-0 mt-4 xl:mt-5 mr-4"
+              class="absolute right-0 top-0 mt-4 xl:mt-2 mr-4"
             >
               <svg
                 width="24"
@@ -115,10 +122,10 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-          <li className="btn btn-primary rounded-full xl:ml-5 text-xs px-2 btn-sm xl:btn-lg xl:px-4 xl:text-xl my-auto">
+          <li className="btn btn-primary rounded-full xl:ml-5 text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case">
             Upload
           </li>
-          <li className="btn btn-outline btn-primary rounded-full   xl:ml-5 text-xs px-2 btn-sm xl:btn-lg xl:px-4 xl:text-xl my-auto">
+          <li className="btn btn-outline btn-primary rounded-full   xl:ml-5 text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case">
             Connect Wallet
           </li>
         </ul>
