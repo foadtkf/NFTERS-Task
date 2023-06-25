@@ -9,3 +9,21 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-text {
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+.indicator-item-verified {
+  position: absolute !important;
+  top: 0px !important;
+  right: -8px !important;
+  color: blue !important;
+  border: none !important;
+  background-color: transparent !important;
+}
