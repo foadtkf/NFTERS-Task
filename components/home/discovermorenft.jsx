@@ -14,8 +14,10 @@ import cf3 from "/assets/morenfts/cf3.png";
 import cf4 from "/assets/morenfts/cf4.png";
 import cf5 from "/assets/morenfts/cf1.png";
 import cf6 from "/assets/morenfts/cf2.png";
+import { useMediaQuery } from "@react-hook/media-query";
 
 const DiscoverMoreNFT = () => {
+  const isMobile = useMediaQuery("(max-width: 767px)");
   const [filterary, setFilterary] = useState([]);
   const handleFilter = (value) => {
     if (filterary.includes(value)) {
@@ -370,11 +372,20 @@ const DiscoverMoreNFT = () => {
   ];
   return (
     <div className="md:px-[10%] py-[5%]  bg-zinc-200   bg-opacity-20">
-      <h2 className="text-[24px] font-extrabold md:text-[32px] uppercase">
+      <h2 className="text-[22px] font-extrabold md:text-[32px] uppercase px-[10%] md:px-0 ">
         discover more nfts
       </h2>
-      <div className="flex justify-between py-[5%] md:py-[40px]">
-        <div className="flex flex-wrap gap-x-2">
+      <div className="md:flex md:flex-row  md:flex-row-reverse md:justify-between py-[5%] md:py-[40px] px-[10%] md:px-0 ">
+        <p
+          className={`btn btn-xs md:btn-sm normal-case btn-ghost md:flex
+            `}
+        >
+          <span>
+            <BsFilter className="my-auto mr-1" />
+          </span>
+          All Filters
+        </p>
+        <div className="flex flex-wrap gap-x-2 ">
           {filters.map((item, index) => (
             <p
               key={index}
@@ -387,99 +398,174 @@ const DiscoverMoreNFT = () => {
             </p>
           ))}
         </div>
-        <p
-          className={`btn btn-xs md:btn-sm normal-case btn-ghost flex
-            `}
-        >
-          <span>
-            <BsFilter className="my-auto mr-1" />
-          </span>
-          All Filters
-        </p>
       </div>
       <div className="md:grid md:grid-cols-2 lg:grid-cols-4 lg:gap-8 md:gap-6 mx-0">
-        {nfts.map((item, index) => (
-          <div
-            className="shadow-lg rounded-xl relative mx-[10%] md:mx-0 bg-white"
-            key={index}
-          >
-            <Image
-              src={item.img}
-              width={247}
-              height={222}
-              className="rounded-lg p-[3%] md:p-[10px] mx-auto"
-              alt=""
-            />
-            <div className="absolute  bottom-[110px] left-[30px] md:bottom-[130px] md:left-[55px] lg:bottom-[115px] lg:left-[25px]">
-              <div className="relative flex flex-row">
-                <div className="relative">
-                  <Image
-                    src={item.contributors[0].img}
-                    width={40}
-                    height={40}
-                    className="rounded-full"
-                    alt=""
-                    style={{ position: "relative", zIndex: 1 }}
-                  />
+        {isMobile &&
+          nfts.slice(0, 4).map((item, index) => (
+            <div
+              className="shadow-lg rounded-xl relative mx-[10%] md:mx-0 bg-white my-[5%]"
+              key={index}
+            >
+              <Image
+                src={item.img}
+                width={247}
+                height={222}
+                className="rounded-lg p-[3%] md:p-[10px] mx-auto"
+                alt=""
+              />
+              <div className="absolute  bottom-[110px] left-[30px] md:bottom-[130px] md:left-[55px] lg:bottom-[115px] lg:left-[25px]">
+                <div className="relative flex flex-row">
+                  <div className="relative">
+                    <Image
+                      src={item.contributors[0].img}
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                      alt=""
+                      style={{ position: "relative", zIndex: 1 }}
+                    />
+                  </div>
+                  <div className="relative -ml-[10px]">
+                    <Image
+                      src={item.contributors[1].img}
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                      alt=""
+                      style={{ position: "relative", zIndex: 2 }}
+                    />
+                  </div>
+                  <div className="relative -ml-[10px]">
+                    <Image
+                      src={item.contributors[2].img}
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                      alt=""
+                      style={{ position: "relative", zIndex: 3 }}
+                    />
+                  </div>
+                  <div className="relative -ml-[10px]">
+                    <Image
+                      src={item.contributors[3].img}
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                      alt=""
+                      style={{ position: "relative", zIndex: 4 }}
+                    />
+                  </div>
                 </div>
-                <div className="relative -ml-[10px]">
-                  <Image
-                    src={item.contributors[1].img}
-                    width={40}
-                    height={40}
-                    className="rounded-full"
-                    alt=""
-                    style={{ position: "relative", zIndex: 2 }}
-                  />
+              </div>
+              <div className=" px-[5%] md:px-[20px]">
+                <p className="  text-left text-sm md:text-[15px] lg:text-[20px] font-bold  py-[2%]">
+                  {item.name}
+                </p>
+                <div className="flex justify-between  pb-[5%]">
+                  <p className="flex text-[6px] md:text-[10px] text-green-600">
+                    <span className="my-auto">
+                      <FaEthereum />
+                    </span>
+                    {item.price} ETH
+                  </p>
+                  <p className=" text-[6px] md:text-[10px]">
+                    {item.quantity} of {item.total}
+                  </p>
                 </div>
-                <div className="relative -ml-[10px]">
-                  <Image
-                    src={item.contributors[2].img}
-                    width={40}
-                    height={40}
-                    className="rounded-full"
-                    alt=""
-                    style={{ position: "relative", zIndex: 3 }}
-                  />
-                </div>
-                <div className="relative -ml-[10px]">
-                  <Image
-                    src={item.contributors[3].img}
-                    width={40}
-                    height={40}
-                    className="rounded-full"
-                    alt=""
-                    style={{ position: "relative", zIndex: 4 }}
-                  />
+                <div className="flex justify-between  py-[10%]">
+                  <p className="flex text-[6px] md:text-[10px] text-violet-800 my-auto">
+                    {item.timeLeft} left
+                  </p>
+                  <p className=" text-[12px] md:text-[15px] text-violet-800 link no-underline ">
+                    Place a bid
+                  </p>
                 </div>
               </div>
             </div>
-            <div className=" px-[5%] md:px-[20px]">
-              <p className="  text-left text-sm md:text-[15px] lg:text-[20px] font-bold  py-[2%]">
-                {item.name}
-              </p>
-              <div className="flex justify-between  pb-[5%]">
-                <p className="flex text-[6px] md:text-[10px] text-green-600">
-                  <span className="my-auto">
-                    <FaEthereum />
-                  </span>
-                  {item.price} ETH
-                </p>
-                <p className=" text-[6px] md:text-[10px]">
-                  {item.quantity} of {item.total}
-                </p>
+          ))}
+        {!isMobile &&
+          nfts.map((item, index) => (
+            <div
+              className="shadow-lg rounded-xl relative mx-[10%] md:mx-0 bg-white"
+              key={index}
+            >
+              <Image
+                src={item.img}
+                width={247}
+                height={222}
+                className="rounded-lg p-[3%] md:p-[10px] mx-auto"
+                alt=""
+              />
+              <div className="absolute  bottom-[110px] left-[30px] md:bottom-[130px] md:left-[55px] lg:bottom-[115px] lg:left-[25px]">
+                <div className="relative flex flex-row">
+                  <div className="relative">
+                    <Image
+                      src={item.contributors[0].img}
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                      alt=""
+                      style={{ position: "relative", zIndex: 1 }}
+                    />
+                  </div>
+                  <div className="relative -ml-[10px]">
+                    <Image
+                      src={item.contributors[1].img}
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                      alt=""
+                      style={{ position: "relative", zIndex: 2 }}
+                    />
+                  </div>
+                  <div className="relative -ml-[10px]">
+                    <Image
+                      src={item.contributors[2].img}
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                      alt=""
+                      style={{ position: "relative", zIndex: 3 }}
+                    />
+                  </div>
+                  <div className="relative -ml-[10px]">
+                    <Image
+                      src={item.contributors[3].img}
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                      alt=""
+                      style={{ position: "relative", zIndex: 4 }}
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="flex justify-between  py-[10%]">
-                <p className="flex text-[6px] md:text-[10px] text-violet-800 my-auto">
-                  {item.timeLeft} left
+              <div className=" px-[5%] md:px-[20px]">
+                <p className="  text-left text-sm md:text-[15px] lg:text-[20px] font-bold  py-[2%]">
+                  {item.name}
                 </p>
-                <p className=" text-[12px] md:text-[15px] text-violet-800 link no-underline ">
-                  Place a bid
-                </p>
+                <div className="flex justify-between  pb-[5%]">
+                  <p className="flex text-[6px] md:text-[10px] text-green-600">
+                    <span className="my-auto">
+                      <FaEthereum />
+                    </span>
+                    {item.price} ETH
+                  </p>
+                  <p className=" text-[6px] md:text-[10px]">
+                    {item.quantity} of {item.total}
+                  </p>
+                </div>
+                <div className="flex justify-between  py-[10%]">
+                  <p className="flex text-[6px] md:text-[10px] text-violet-800 my-auto">
+                    {item.timeLeft} left
+                  </p>
+                  <p className=" text-[12px] md:text-[15px] text-violet-800 link no-underline ">
+                    Place a bid
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
       <div className="flex justify-center pt-[5%]">
         <li className="btn btn-outline btn-primary rounded-full   xl:ml-5 text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case">

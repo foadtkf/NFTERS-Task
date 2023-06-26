@@ -3,6 +3,7 @@ import React from "react";
 import leftimg from "/assets/nftmarketplace/leftimg.png";
 import mid from "/assets/nftmarketplace/mid1.png";
 import mid2 from "/assets/nftmarketplace/mid2.png";
+import user1 from "/assets/users/user1.png";
 import li1 from "/assets/nftmarketplace/list/li1.png";
 import li2 from "/assets/nftmarketplace/list/li2.png";
 import li3 from "/assets/nftmarketplace/list/li3.png";
@@ -60,9 +61,13 @@ const NFTMarket = () => {
         <Image src={leftimg} className="rounded-lg" alt="" />
         <div className="pt-[5%]  flex justify-between">
           <div className="flex gap-x-2">
-            <img
-              className="w-10  rounded-full"
-              src="https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg"
+            <Image
+              src={user1}
+              width={40}
+              height={40}
+              className="rounded-full"
+              alt=""
+              style={{ position: "relative", zIndex: 1 }}
             />
             <div>
               <p className="  text-left text-sm md:text-[15px] lg:text-[20px] font-bold">
@@ -96,9 +101,13 @@ const NFTMarket = () => {
               The Futr Abstr
             </p>
             <div className="flex md:gap-x-2">
-              <img
-                className="w-4 md:w-6  rounded-full"
-                src="https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg"
+              <Image
+                src={user1}
+                width={25}
+                height={25}
+                className="rounded-full"
+                alt=""
+                style={{ position: "relative", zIndex: 1 }}
               />
               <p className="flex text-xs  badge badge-accent badge-outline  rounded-sm">
                 <span className="my-auto">
@@ -109,7 +118,7 @@ const NFTMarket = () => {
               <p className="text-xs my-auto">1 of 8</p>
             </div>
             <div>
-              <p className="  btn btn-outline btn-primary btn-sm rounded-full">
+              <p className="  btn btn-outline btn-primary btn-sm rounded-full normal-case">
                 Place a bid
               </p>
             </div>
@@ -128,9 +137,13 @@ const NFTMarket = () => {
               The Futr Abstr
             </p>
             <div className="flex md:gap-x-2">
-              <img
-                className="w-4 md:w-6  rounded-full"
-                src="https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg"
+              <Image
+                src={user1}
+                width={25}
+                height={25}
+                className="rounded-full"
+                alt=""
+                style={{ position: "relative", zIndex: 1 }}
               />
               <p className="flex text-xs  badge badge-accent badge-outline  rounded-sm">
                 <span className="my-auto">
@@ -160,9 +173,13 @@ const NFTMarket = () => {
               The Futr Abstr
             </p>
             <div className="flex md:gap-x-2">
-              <img
-                className="w-4 md:w-6  rounded-full"
-                src="https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg"
+              <Image
+                src={user1}
+                width={25}
+                height={25}
+                className="rounded-full"
+                alt=""
+                style={{ position: "relative", zIndex: 1 }}
               />
               <p className="flex text-xs  badge badge-accent badge-outline  rounded-sm">
                 <span className="my-auto">

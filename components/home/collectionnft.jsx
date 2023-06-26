@@ -3,6 +3,7 @@ import React from "react";
 import leftimg from "/assets/nftmarketplace/leftimg.png";
 import mid2 from "/assets/nftmarketplace/mid2.png";
 import hero from "/assets/hero.svg";
+import user1 from "/assets/users/user1.png";
 import cf1 from "/assets/collectionfeaturednfts/cf1.png";
 import cf2 from "/assets/collectionfeaturednfts/cf2.png";
 import cf3 from "/assets/collectionfeaturednfts/cf3.png";
@@ -38,7 +39,7 @@ const CollectionNFT = () => {
     },
   ];
   return (
-    <div className="lg:px-[10%] py-[10%]">
+    <div className="lg:px-[10%] pb-[10%] pt-[5%] bg-zinc-200 bg-opacity-20 ">
       <h2 className="uppercase font-extrabold text-[20px] md:text-[25px] text-black py-[3%]">
         Collection featured nfts
       </h2>
@@ -95,9 +96,13 @@ const CollectionNFT = () => {
                 </p>
                 <div className="flex justify-between">
                   <div className="flex gap-x-2">
-                    <img
-                      className="w-[28px] h-[28px]  rounded-full"
-                      src="https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg"
+                    <Image
+                      src={user1}
+                      width={25}
+                      height={25}
+                      className="rounded-full"
+                      alt=""
+                      style={{ position: "relative", zIndex: 1 }}
                     />
                     <p className="text-xs">by {collection.username}</p>
                   </div>{" "}
