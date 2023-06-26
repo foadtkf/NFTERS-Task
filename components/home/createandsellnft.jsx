@@ -5,6 +5,7 @@ import mid2 from "/assets/nftmarketplace/mid2.png";
 import hero from "/assets/hero.svg";
 import user1 from "/assets/users/user1.png";
 import user2 from "/assets/users/user2.png";
+import { toast } from "react-hot-toast";
 const CreateAndSellNFT = () => {
   return (
     <div className="lg:px-[10%] py-[10%] md:grid grid-cols-2 flex flex-col gap-y-8">
@@ -115,7 +116,12 @@ const CreateAndSellNFT = () => {
           diam ut. Pellentesque eu sit blandit fringilla risus faucibus.
         </p>
         <div>
-          <p className="btn btn-primary rounded-full">Sign Up Now</p>
+          <p
+            className="btn btn-primary rounded-full normal-case"
+            onClick={() => toast.error("Working on that!")}
+          >
+            Sign Up Now
+          </p>
         </div>
       </div>
     </div>

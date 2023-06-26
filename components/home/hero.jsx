@@ -5,10 +5,9 @@ import hero2 from "/assets/hero2.svg";
 import hero3 from "/assets/hero3.svg";
 import user1 from "/assets/users/user1.png";
 import herobadge from "/assets/herobadge.svg";
-import { useRouter } from "next/router";
 import { FaEthereum } from "react-icons/fa";
+import { toast } from "react-hot-toast";
 const Hero = () => {
-  const router = useRouter();
   return (
     <div
       className=" pt-[40%] md:pt-[20%] lg:pt-[10%] pb-[6%] "
@@ -109,7 +108,7 @@ const Hero = () => {
           </p>
           <button
             className="btn btn-primary rounded-full normal-case btn-sm"
-            onClick={() => router.push("#explore")}
+            onClick={() => toast.error("Working on that!")}
           >
             Explore Now{" "}
           </button>

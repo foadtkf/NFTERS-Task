@@ -15,6 +15,7 @@ import cf4 from "/assets/morenfts/cf4.png";
 import cf5 from "/assets/morenfts/cf1.png";
 import cf6 from "/assets/morenfts/cf2.png";
 import { useMediaQuery } from "@react-hook/media-query";
+import { toast } from "react-hot-toast";
 
 const DiscoverMoreNFT = () => {
   const isMobile = useMediaQuery("(max-width: 767px)");
@@ -476,7 +477,10 @@ const DiscoverMoreNFT = () => {
                   <p className="flex text-[6px] md:text-[10px] text-violet-800 my-auto">
                     {item.timeLeft} left
                   </p>
-                  <p className=" text-[12px] md:text-[15px] text-violet-800 link no-underline ">
+                  <p
+                    className=" text-[12px] md:text-[15px] text-violet-800 link no-underline "
+                    onClick={() => toast.error("Working on that!")}
+                  >
                     Place a bid
                   </p>
                 </div>
@@ -559,7 +563,10 @@ const DiscoverMoreNFT = () => {
                   <p className="flex text-[6px] md:text-[10px] text-violet-800 my-auto">
                     {item.timeLeft} left
                   </p>
-                  <p className=" text-[12px] md:text-[15px] text-violet-800 link no-underline ">
+                  <p
+                    className=" text-[12px] md:text-[15px] text-violet-800 link no-underline "
+                    onClick={() => toast.error("Working on that!")}
+                  >
                     Place a bid
                   </p>
                 </div>
@@ -568,7 +575,10 @@ const DiscoverMoreNFT = () => {
           ))}
       </div>
       <div className="flex justify-center pt-[5%]">
-        <li className="btn btn-outline btn-primary rounded-full   xl:ml-5 text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case">
+        <li
+          className="btn btn-outline btn-primary rounded-full   xl:ml-5 text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case"
+          onClick={() => toast.error("Working on that!")}
+        >
           More NFTs
         </li>
       </div>

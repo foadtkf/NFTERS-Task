@@ -3,15 +3,16 @@ import React from "react";
 import leftimg from "/assets/nftmarketplace/leftimg.png";
 import mid from "/assets/nftmarketplace/mid1.png";
 import mid2 from "/assets/nftmarketplace/mid2.png";
+import mid3 from "/assets/nftmarketplace/mid3.png";
 import user1 from "/assets/users/user1.png";
 import li1 from "/assets/nftmarketplace/list/li1.png";
 import li2 from "/assets/nftmarketplace/list/li2.png";
 import li3 from "/assets/nftmarketplace/list/li3.png";
 import li4 from "/assets/nftmarketplace/list/li4.png";
 import li5 from "/assets/nftmarketplace/list/li5.png";
-import mid3 from "/assets/nftmarketplace/mid3.png";
 import { FaEthereum } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
+import { toast } from "react-hot-toast";
 const NFTMarket = () => {
   const collections = [
     {
@@ -55,6 +56,41 @@ const NFTMarket = () => {
       verified: true,
     },
   ];
+  const nftlist = [
+    {
+      name: "The Futr Abstr",
+      img: mid,
+      user: {
+        name: "user1",
+        img: user1,
+      },
+      price: 0.25,
+      qty: 1,
+      total: 8,
+    },
+    {
+      name: "Second NFT",
+      img: mid2,
+      user: {
+        name: "user1",
+        img: user1,
+      },
+      price: 0.15,
+      qty: 2,
+      total: 6,
+    },
+    {
+      name: "Art Crypto",
+      img: mid3,
+      user: {
+        name: "user3",
+        img: user1,
+      },
+      price: 0.45,
+      qty: 1,
+      total: 5,
+    },
+  ];
   return (
     <div className="flex flex-wrap lg:flex-nowrap  md:flex-row flex-col lg:px-[10%] gap-x-4 gap-y-4 py-[10%]">
       <div className="lg:w-[33%] md:mx-0 px-[5%] md:px-0">
@@ -88,114 +124,49 @@ const NFTMarket = () => {
         </div>
       </div>
       <div className="lg:w-[33%] flex flex-col gap-y-2">
-        <div className="flex">
-          <Image
-            src={mid}
-            height={147}
-            width={147}
-            className="rounded-lg"
-            alt=""
-          />
-          <div className="ml-2 flex flex-col gap-y-2 justify-center">
-            <p className="  text-left text-sm md:text-[20px] font-bold">
-              The Futr Abstr
-            </p>
-            <div className="flex md:gap-x-2">
-              <Image
-                src={user1}
-                width={25}
-                height={25}
-                className="rounded-full"
-                alt=""
-                style={{ position: "relative", zIndex: 1 }}
-              />
-              <p className="flex text-xs  badge badge-accent badge-outline  rounded-sm">
-                <span className="my-auto">
-                  <FaEthereum />
-                </span>
-                0.25 ETH
+        {nftlist.map((item, index) => (
+          <div className="flex" key={index}>
+            <Image
+              src={item.img}
+              height={147}
+              width={147}
+              className="rounded-lg"
+              alt=""
+            />
+            <div className="ml-2 flex flex-col gap-y-2 justify-center">
+              <p className="  text-left text-sm md:text-[20px] font-bold">
+                {item.name}
               </p>
-              <p className="text-xs my-auto">1 of 8</p>
-            </div>
-            <div>
-              <p className="  btn btn-outline btn-primary btn-sm rounded-full normal-case">
-                Place a bid
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="flex">
-          <Image
-            src={mid2}
-            height={147}
-            width={147}
-            className="rounded-lg"
-            alt=""
-          />
-          <div className="ml-2 flex flex-col gap-y-2 justify-center">
-            <p className="  text-left text-sm md:text-[20px] font-bold">
-              The Futr Abstr
-            </p>
-            <div className="flex md:gap-x-2">
-              <Image
-                src={user1}
-                width={25}
-                height={25}
-                className="rounded-full"
-                alt=""
-                style={{ position: "relative", zIndex: 1 }}
-              />
-              <p className="flex text-xs  badge badge-accent badge-outline  rounded-sm">
-                <span className="my-auto">
-                  <FaEthereum />
-                </span>
-                0.25 ETH
-              </p>
-              <p className="text-xs my-auto">1 of 8</p>
-            </div>
-            <div>
-              <p className="  btn btn-outline btn-primary btn-sm rounded-full">
-                Place a bid
-              </p>
+              <div className="flex md:gap-x-2">
+                <Image
+                  src={item.user.img}
+                  width={25}
+                  height={25}
+                  className="rounded-full"
+                  alt=""
+                  style={{ position: "relative", zIndex: 1 }}
+                />
+                <p className="flex text-xs  badge badge-accent badge-outline  rounded-sm">
+                  <span className="my-auto">
+                    <FaEthereum />
+                  </span>
+                  {item.price} ETH
+                </p>
+                <p className="text-xs my-auto">
+                  {item.qty} of {item.total}
+                </p>
+              </div>
+              <div>
+                <p
+                  className="  btn btn-outline btn-primary btn-sm rounded-full normal-case"
+                  onClick={() => toast.error("Working on that!")}
+                >
+                  Place a bid
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="flex">
-          <Image
-            src={mid3}
-            height={147}
-            width={147}
-            className="rounded-lg"
-            alt=""
-          />
-          <div className="ml-2 flex flex-col gap-y-2 justify-center">
-            <p className="  text-left text-sm md:text-[20px] font-bold">
-              The Futr Abstr
-            </p>
-            <div className="flex md:gap-x-2">
-              <Image
-                src={user1}
-                width={25}
-                height={25}
-                className="rounded-full"
-                alt=""
-                style={{ position: "relative", zIndex: 1 }}
-              />
-              <p className="flex text-xs  badge badge-accent badge-outline  rounded-sm">
-                <span className="my-auto">
-                  <FaEthereum />
-                </span>
-                0.25 ETH
-              </p>
-              <p className="text-xs my-auto">1 of 8</p>
-            </div>
-            <div>
-              <p className="  btn btn-outline btn-primary btn-sm rounded-full">
-                Place a bid
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
       <div className="lg:w-[33%] pl-[3%]  border border-r-0 border-b-0 border-t-0">
         <h3 className="text-[20px] uppercase md:text-xl font-extrabold flex">
