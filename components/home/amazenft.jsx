@@ -13,7 +13,7 @@ const AmazeNFT = () => {
         <h3 className="text-[20px] md:text-xl font-bold flex">
           <AiOutlineTransaction className="my-auto mr-2" /> Fast Transaction
         </h3>
-        <p className="text-xs">
+        <p className="text-xs text-justify">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque
           atque itaque cum at eaque?
         </p>
@@ -22,7 +22,7 @@ const AmazeNFT = () => {
         <h3 className="text-[20px] md:text-xl font-bold flex">
           <BsGraphUp className="my-auto mr-2" /> Growth Transaction
         </h3>
-        <p className="text-xs">
+        <p className="text-xs text-justify">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cumque
           atque itaque cum at eaque?
         </p>

@@ -108,7 +108,7 @@ const CreateAndSellNFT = () => {
         <h2 className="text-[24px] font-extrabold md:text-[32px] uppercase">
           Create and sell your NFTs
         </h2>
-        <p className="text-sm md:text-[18px]">
+        <p className="text-sm md:text-[18px] text-justify">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi ac
           phasellus placerat a pellentesque tellus sed egestas. Et tristique
           dictum sit tristique sed non. Lacinia lorem id consectetur pretium

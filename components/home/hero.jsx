@@ -82,7 +82,7 @@ const Hero = () => {
           <h1 className="text-[30px] lg:text-[40px] font-extrabold text-black">
             Discover, and collect Digital Art NFTs
           </h1>
-          <p className="pt-4 pb-7 pr-[3%] text-xs md:text-xl text-[#565656]">
+          <p className="pt-4 pb-7 pr-[3%] text-xs md:text-xl text-[#565656] text-justify">
             Digital marketplace for crypto collectibles and non-fungible tokens
             (NFTs). Buy, Sell, and discover exclusive digital assets.
           </p>
