@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import Hero from "../components/home/hero";
 import AmazeNFT from "../components/home/amazenft";
 import NFTMarket from "../components/home/nftmarket";
+import CollectionNFT from "../components/home/collectionnft";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       </div>
       <AmazeNFT />
       <NFTMarket />
+      <CollectionNFT />
     </div>
   );
 }

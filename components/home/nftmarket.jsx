@@ -55,7 +55,7 @@ const NFTMarket = () => {
     },
   ];
   return (
-    <div className="flex flex-wrap lg:flex-nowrap  md:flex-row flex-col lg:px-[10%] gap-x-4 gap-y-4">
+    <div className="flex flex-wrap lg:flex-nowrap  md:flex-row flex-col lg:px-[10%] gap-x-4 gap-y-4 py-[10%]">
       <div className="lg:w-[33%] md:mx-0 px-[5%] md:px-0">
         <Image src={leftimg} className="rounded-lg" alt="" />
         <div className="pt-[5%]  flex justify-between">
