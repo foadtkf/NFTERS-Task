@@ -105,7 +105,7 @@ const CreateAndSellNFT = () => {
         </div>
       </div>
       <div className="flex flex-col gap-y-4 md:gap-y-10 pl-[10%] justify-center">
-        <h2 className="text-[24px] font-extrabold md:text-[32px]">
+        <h2 className="text-[24px] font-extrabold md:text-[32px] uppercase">
           Create and sell your NFTs
         </h2>
         <p className="text-sm md:text-[18px]">

@@ -38,7 +38,7 @@ const CollectionNFT = () => {
     },
   ];
   return (
-    <div className="lg:px-[10%] pb-[10%]">
+    <div className="lg:px-[10%] py-[10%]">
       <h2 className="uppercase font-extrabold text-[20px] md:text-[25px] text-black py-[3%]">
         Collection featured nfts
       </h2>
