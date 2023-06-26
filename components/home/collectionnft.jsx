@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import leftimg from "/assets/nftmarketplace/leftimg.png";
-import mid from "/assets/nftmarketplace/mid1.png";
 import mid2 from "/assets/nftmarketplace/mid2.png";
-import mid3 from "/assets/nftmarketplace/mid3.png";
 import hero from "/assets/hero.svg";
 import cf1 from "/assets/collectionfeaturednfts/cf1.png";
 import cf2 from "/assets/collectionfeaturednfts/cf2.png";
@@ -44,9 +42,12 @@ const CollectionNFT = () => {
       <h2 className="uppercase font-extrabold text-[20px] md:text-[25px] text-black py-[3%]">
         Collection featured nfts
       </h2>
-      <div className="flex flex-wrap lg:flex-nowrap  md:flex-row flex-col gap-x-4 gap-y-4">
+      <div className="flex flex-wrap lg:flex-nowrap  md:flex-row flex-col lg:gap-x-4 gap-y-4">
         {collections.map((collection, index) => (
-          <div key={index} className="lg:w-[33%] md:mx-0 px-[5%] md:px-0">
+          <div
+            key={index}
+            className="lg:w-[33%] md:max-w-[50%] md:mx-0 px-[5%] md:px-0"
+          >
             <div className="flex  gap-x-2">
               <div className="max-w-[75%] flex flex-col justify-center">
                 <Image

@@ -5,6 +5,7 @@ import Hero from "../components/home/hero";
 import AmazeNFT from "../components/home/amazenft";
 import NFTMarket from "../components/home/nftmarket";
 import CollectionNFT from "../components/home/collectionnft";
+import CreateAndSellNFT from "../components/home/createandsellnft";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <AmazeNFT />
       <NFTMarket />
       <CollectionNFT />
+      <CreateAndSellNFT />
     </div>
   );
 }
