@@ -27,3 +27,10 @@
   border: none !important;
   background-color: transparent !important;
 }
+.drawer {
+  display: grid;
+  width: 100%;
+  overflow: hidden;
+  height: auto !important;
+  /* height: 100dvh; */
+}

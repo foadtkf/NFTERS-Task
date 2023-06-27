@@ -40,7 +40,7 @@ const Hero = () => {
           <div
             className="indicator-item top-[50%] indicator-start  md:hidden"
             style={{
-              zIndex: "1020",
+              zIndex: "100",
             }}
           >
             <Image
