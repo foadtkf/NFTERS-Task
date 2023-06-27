@@ -40,7 +40,7 @@ const CollectionNFT = () => {
   ];
   return (
     <div className="lg:px-[10%] pb-[10%] pt-[5%] bg-zinc-200 bg-opacity-20 ">
-      <h2 className="uppercase font-extrabold text-[20px] md:text-[25px] text-black py-[3%]">
+      <h2 className="uppercase font-extrabold text-[20px] md:text-[25px] text-black py-[3%] max-[768px]:px-[5%]">
         Collection featured nfts
       </h2>
       <div className="flex flex-wrap lg:flex-nowrap  md:flex-row flex-col lg:gap-x-4 gap-y-4">

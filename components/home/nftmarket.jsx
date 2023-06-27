@@ -123,7 +123,7 @@ const NFTMarket = () => {
           </div>
         </div>
       </div>
-      <div className="lg:w-[33%] flex flex-col gap-y-2">
+      <div className="lg:w-[33%] flex flex-col gap-y-2 mx-auto ">
         {nftlist.map((item, index) => (
           <div className="flex" key={index}>
             <Image
@@ -137,7 +137,7 @@ const NFTMarket = () => {
               <p className="  text-left text-sm md:text-[20px] font-bold">
                 {item.name}
               </p>
-              <div className="flex md:gap-x-2">
+              <div className="flex min-[374px]:gap-x-2">
                 <Image
                   src={item.user.img}
                   width={25}
@@ -168,7 +168,7 @@ const NFTMarket = () => {
           </div>
         ))}
       </div>
-      <div className="lg:w-[33%] pl-[3%]  border border-r-0 border-b-0 border-t-0">
+      <div className="lg:w-[33%] pl-[3%]  border border-r-0 border-b-0 border-t-0 mx-auto">
         <h3 className="text-[20px] uppercase md:text-xl font-extrabold flex">
           Top collections over
         </h3>

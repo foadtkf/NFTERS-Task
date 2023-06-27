@@ -38,7 +38,7 @@ const Hero = () => {
             <Image src={herobadge} className="rounded-full" alt="" />
           </div>
           <div
-            className="indicator-item top-[130px] indicator-start  md:hidden"
+            className="indicator-item top-[50%] indicator-start  md:hidden"
             style={{
               zIndex: "1020",
             }}
@@ -71,7 +71,7 @@ const Hero = () => {
                     <p className="text-xs md:text-sm lg:text-lg">Arkhan17</p>
                   </div>
                 </div>
-                <div className="glassbg rounded-lg  flex justify-between mt-[40%] md:mt-[70%]  lg:mt-[75%] px-4 md:px-[24px] py-2 md:py-[14px]">
+                <div className="glassbg rounded-lg  flex justify-between mt-[45%] min-[374px]:mt-[60%] md:mt-[70%]  lg:mt-[75%] px-4 md:px-[24px] py-2 md:py-[14px]">
                   <div>
                     <p className="text-xs">Current Bid</p>
                     <p className="flex text-xs md:text-[14px] lg:text-[20px]">
