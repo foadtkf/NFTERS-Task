@@ -1,11 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.servicecards::-webkit-scrollbar {
+.scroller-x-axes::-webkit-scrollbar {
   display: none;
 }
 
-.servicecards {
+.scroller-x-axes {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -33,4 +33,18 @@
   overflow: hidden;
   height: auto !important;
   /* height: 100dvh; */
+}
+.btnnav {
+  color: white;
+  border: 1px solid white;
+  transition: 1s;
+}
+.btnnav:hover {
+  color: black;
+  border: 1px solid black;
+  background: white;
+  transform: scale(1);
+}
+.scroll-to-top {
+  border-radius: 9999px !important;
 }

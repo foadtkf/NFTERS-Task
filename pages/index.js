@@ -7,8 +7,12 @@ import NFTMarket from "../components/home/nftmarket";
 import CollectionNFT from "../components/home/collectionnft";
 import CreateAndSellNFT from "../components/home/createandsellnft";
 import DiscoverMoreNFT from "../components/home/discovermorenft";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={` min-h-screen`}>
       <Head>

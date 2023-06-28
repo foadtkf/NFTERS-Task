@@ -82,7 +82,7 @@ const Navbar = ({ showDD, setShowDD }) => {
             </button>
             <ul
               tabindex={0}
-              className={`text-sm font-thin font-serif md:text-base fixed h-full leftt-0 top-0 p-5 overflow-auto shadow bg-slate-400  text-white w-[80%]  space-y-2  ${
+              className={` text-sm font-thin font-serif md:text-base fixed h-full leftt-0 top-0 p-5 overflow-auto shadow bg-black  text-white w-[80%]  space-y-2  ${
                 drop ? "flex flex-col" : "hidden"
               }`}
             >
@@ -121,19 +121,19 @@ const Navbar = ({ showDD, setShowDD }) => {
                   </button>
                 </div>
               </li>
-              <li className="mb-1 text-[10px] btn btn-sm btn-ghost rounded-none ">
+              <li className="mb-1 text-[10px] btn btn-sm btn-ghost rounded-none normal-case ">
                 Marketplace
               </li>
-              <li className="my-1 text-[10px] btn btn-sm btn-ghost rounded-none ">
+              <li className="my-1 text-[10px] btn btn-sm btn-ghost rounded-none normal-case ">
                 Resource
               </li>
-              <li className="my-1 text-[10px] btn btn-sm btn-ghost rounded-none ">
+              <li className="my-1 text-[10px] btn btn-sm btn-ghost rounded-none normal-case ">
                 About
               </li>
-              <li className="my-1 text-[10px] btn btn-sm btn-primary rounded-none">
+              <li className="my-1 text-[10px] btn btn-sm btn-primary rounded-none normal-case">
                 Upload
               </li>
-              <li className="my-1 text-[10px] btn btn-sm btn-outline btn-primary rounded-none ">
+              <li className="my-1 text-[10px] btn btn-sm btn-outline btn-primary rounded-none normal-case ">
                 Connect Wallet
               </li>
             </ul>

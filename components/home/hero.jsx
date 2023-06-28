@@ -113,7 +113,7 @@ const Hero = () => {
             Explore Now{" "}
           </button>
           <div>
-            <div className="stats servicecards flex md:stats-horizontal overflow-x-scroll mt-7 md:hidden lg:flex">
+            <div className="stats scroller-x-axes flex md:stats-horizontal overflow-x-scroll mt-7 md:hidden lg:flex">
               <div className="stat">
                 <div className="stat-value">98K+</div>
                 <div className="stat-desc">Artwork</div>
@@ -132,7 +132,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="stats servicecards md:flex hidden lg:hidden md:stats-horizontal overflow-x-scroll mt-7">
+      <div className="stats scroller-x-axes md:flex hidden lg:hidden md:stats-horizontal overflow-x-scroll mt-7">
         <div className="stat">
           <div className="stat-value">98K+</div>
           <div className="stat-desc">Artwork</div>

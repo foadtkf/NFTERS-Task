@@ -92,8 +92,8 @@ const NFTMarket = () => {
     },
   ];
   return (
-    <div className="flex flex-wrap lg:flex-nowrap  md:flex-row flex-col lg:px-[10%] gap-x-4 gap-y-4 py-[10%]">
-      <div className="lg:w-[33%] md:mx-0 px-[5%] md:px-0">
+    <div className="scroller-x-axes flex max-[1023px]:overflow-x-scroll md:flex-row flex-col md:px-[10%] gap-x-4 gap-y-4 py-[10%]">
+      <div className="lg:w-[33%] max-[1023px]:min-w-[50%] max-[767px]:w-full  md:mx-0 px-[5%] md:px-0">
         <Image src={leftimg} className="rounded-lg" alt="" />
         <div className="pt-[5%]  flex justify-between">
           <div className="flex gap-x-2">
@@ -123,7 +123,7 @@ const NFTMarket = () => {
           </div>
         </div>
       </div>
-      <div className="lg:w-[33%] flex flex-col gap-y-2 mx-auto ">
+      <div className="lg:w-[33%] max-[1023px]:min-w-[60%] max-[767px]:w-full  flex flex-col gap-y-2 mx-auto items-center">
         {nftlist.map((item, index) => (
           <div className="flex" key={index}>
             <Image
@@ -168,7 +168,7 @@ const NFTMarket = () => {
           </div>
         ))}
       </div>
-      <div className="lg:w-[33%] pl-[3%]  border border-r-0 border-b-0 border-t-0 mx-auto">
+      <div className="lg:w-[33%] max-[1023px]:min-w-[50%] max-[767px]:w-full  md:pl-[3%] px-[5%] md:px-0  border border-r-0 border-b-0 border-t-0 mx-auto">
         <h3 className="text-[20px] uppercase md:text-xl font-extrabold flex">
           Top collections over
         </h3>

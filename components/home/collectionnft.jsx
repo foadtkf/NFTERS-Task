@@ -39,15 +39,15 @@ const CollectionNFT = () => {
     },
   ];
   return (
-    <div className="lg:px-[10%] pb-[10%] pt-[5%] bg-zinc-200 bg-opacity-20 ">
-      <h2 className="uppercase font-extrabold text-[20px] md:text-[25px] text-black py-[3%] max-[768px]:px-[5%]">
+    <div className="pb-[10%] pt-[5%] bg-zinc-200 bg-opacity-20 ">
+      <h2 className="uppercase font-extrabold text-[20px] md:text-[25px] text-black py-[3%] max-[767px]:px-[5%] md:px-[10%] ">
         Collection featured nfts
       </h2>
-      <div className="flex flex-wrap lg:flex-nowrap  md:flex-row flex-col lg:gap-x-4 gap-y-4">
+      <div className="scroller-x-axes flex max-[1023px]:overflow-x-scroll   md:flex-row flex-col md:gap-x-4 gap-y-4 md:px-[10%] ">
         {collections.map((collection, index) => (
           <div
             key={index}
-            className="lg:w-[33%] md:max-w-[50%] md:mx-0 px-[5%] md:px-0"
+            className="lg:w-[33%] max-[1023px]:min-w-[50%] max-[767px]:w-full md:mx-0 px-[5%] md:px-0"
           >
             <div className="flex  gap-x-2">
               <div className="max-w-[75%] flex flex-col justify-center">
@@ -116,9 +116,6 @@ const CollectionNFT = () => {
             </div>
           </div>
         ))}
-
-        <div></div>
-        <div></div>
       </div>
     </div>
   );

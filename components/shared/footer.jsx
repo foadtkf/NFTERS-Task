@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="px-[10%]">
       <div className=" flex flex-wrap justify-between py-[10%] gap-y-4">
         <div className="md:w-[50%] lg:w-[33%]">
-          <div className="text-black text-lg md:text-[24px] font-bold uppercase">
+          <div className="text-black text-lg md:text-[24px] font-extrabold uppercase">
             NFters{" "}
           </div>
           <p className=" text-xs md:text-[14px] text-justify mt-4">

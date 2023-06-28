@@ -411,20 +411,20 @@ const DiscoverMoreNFT = () => {
           ))}
         </div>
       </div>
-      <div className="md:grid md:grid-cols-2 lg:grid-cols-4 lg:gap-8 md:gap-6 mx-0">
+      <div className="scroller-x-axes flex max-[767px]:overflow-x-scroll md:grid md:grid-cols-2 lg:grid-cols-4 lg:gap-8 md:gap-6 mx-0">
         {nftCards.map((item, index) => (
           <div
-            className="shadow-lg rounded-xl relative mx-[10%] md:mx-0 bg-white max-[767px]:my-[5%] pt-[3%] md:pt-0"
+            className="shadow-lg rounded-xl relative ml-[5%] md:mx-0 bg-white max-[767px]:my-[5%] pt-[3%] md:pt-0  transition-transform duration-300 transform-gpu hover:-translate-y-1 hover:cursor-pointer  max-[767px]:min-w-[60%]"
             key={index}
           >
             <Image
               src={item.img}
               width={247}
               height={222}
-              className="rounded-lg  md:p-[10px] mx-auto"
+              className="rounded-lg  p-[10px] mx-auto"
               alt=""
             />
-            <div className="absolute  bottom-[107px] left-[20px] min-[374px]:bottom-[120px] min-[374px]:left-[40px]  min-[424px]:left-[65px] min-[424px]:bottom-[130px] md:left-[50px] lg:bottom-[115px] lg:left-[25px]">
+            <div className="absolute  bottom-[92px] left-[15px] min-[374px]:bottom-[100px] min-[374px]:left-[20px]  min-[424px]:left-[25px] min-[424px]:bottom-[110px] md:bottom-[130px] md:left-[50px] lg:bottom-[115px] lg:left-[25px]">
               <div className="relative flex flex-row">
                 <div className="relative">
                   <Image
