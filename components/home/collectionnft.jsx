@@ -57,6 +57,7 @@ const CollectionNFT = () => {
                   height={272}
                   className="rounded-lg my-auto"
                   alt=""
+                  data-aos="zoom-in-down"
                 />
               </div>
               <div className="min-w-[25%] flex flex-col gap-y-2 justify-center ">
@@ -67,6 +68,7 @@ const CollectionNFT = () => {
                     width={103}
                     className="rounded-lg"
                     alt=""
+                    data-aos="zoom-out"
                   />
                 </div>
                 <div className="flex ">
@@ -76,6 +78,7 @@ const CollectionNFT = () => {
                     width={103}
                     className="rounded-lg"
                     alt=""
+                    data-aos="zoom-out"
                   />
                 </div>
                 <div className="flex">
@@ -85,6 +88,7 @@ const CollectionNFT = () => {
                     width={103}
                     className="rounded-lg"
                     alt=""
+                    data-aos="zoom-out"
                   />
                 </div>
               </div>

@@ -71,7 +71,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="md:w-[50%] lg:w-[33%]">
+        <div className="md:w-[50%] lg:w-[33%] max-[767px]:pb-[10%]">
           <div className="text-black text-sm md:text-lg font-bold ">
             Stay In The Loop{" "}
           </div>

@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { ImCross } from "react-icons/im";
 import { useState } from "react";
+import useWindowScroll from "@react-hook/window-scroll";
+import Link from "next/link";
 
 const Navbar = ({ showDD, setShowDD }) => {
+  const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
+  const boxShadow = 0;
+
+  const scrollY = useWindowScroll(5);
+  useEffect(() => {
+    if (scrollY > 0) {
+      setBackgroundTransparacy(0.82);
+    } else setBackgroundTransparacy(0);
+  }, [scrollY]);
   const [drop, setDrop] = useState(false);
   const handledrop = () => {
     if (!drop) {
@@ -16,28 +27,48 @@ const Navbar = ({ showDD, setShowDD }) => {
     <div
       className="fixed w-full top-0 z-50"
       style={{
+        background: `rgba(0, 0, 0, ${backgroundTransparacy})`,
+        boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
         zIndex: "1030",
       }}
     >
-      <div class={` flex lg:justify-center  bg-white`}>
+      <div class={` flex lg:justify-center  `}>
         <div className="  my-auto">
           <div class="navbar  hidden lg:block">
             <div class="navbar-center">
               <ul className="menu menu-horizontal px-1">
-                <li>
-                  <a className="text-violet-800 text-[24px] font-extrabold btn-sm my-auto ">
-                    NFTERS
-                  </a>
-                </li>
-                <li className="btn btn-ghost text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case rounded-full">
+                <Link
+                  href="/"
+                  className={` text-[24px] font-extrabold btn-sm my-auto  ${
+                    scrollY > 0 ? "text-white" : "text-violet-800"
+                  }`}
+                >
+                  NFTERS
+                </Link>
+                <Link
+                  href="/marketplace"
+                  className={`btn btn-ghost text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case rounded-full ${
+                    scrollY > 0 && "text-white btn-outline"
+                  }`}
+                >
                   Marketplace
-                </li>
-                <li className=" btn btn-ghost text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case rounded-full">
+                </Link>
+                <Link
+                  href="/resources"
+                  className={`btn btn-ghost text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case rounded-full ${
+                    scrollY > 0 && "text-white btn-outline"
+                  }`}
+                >
                   Resource
-                </li>
-                <li className="btn btn-ghost text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case rounded-full">
+                </Link>
+                <Link
+                  href="/about"
+                  className={`btn btn-ghost text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case rounded-full ${
+                    scrollY > 0 && "text-white btn-outline"
+                  }`}
+                >
                   About
-                </li>
+                </Link>
                 <div class="pt-2 xl:pt-0  relative  text-gray-600">
                   <input
                     class="border-2 border-gray-300 bg-white h-10 xl:h-8 px-5 pr-16 rounded-full text-sm focus:outline-none"
@@ -67,18 +98,26 @@ const Navbar = ({ showDD, setShowDD }) => {
                     </svg>
                   </button>
                 </div>
-                <li className="btn btn-primary rounded-full xl:ml-5 text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case">
+                <Link
+                  href="/upload"
+                  className="btn btn-primary rounded-full xl:ml-5 text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case"
+                >
                   Upload
-                </li>
-                <li className="btn btn-outline btn-primary rounded-full   xl:ml-5 text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case">
+                </Link>
+                <Link
+                  href="/wallet"
+                  className="btn btn-outline btn-primary rounded-full   xl:ml-5 text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case"
+                >
                   Connect Wallet
-                </li>
+                </Link>
               </ul>
             </div>
           </div>
           <div className="block lg:hidden">
             <button onClick={handledrop} className="text-[1.5rem] mx-2">
-              <AiOutlineMenu />
+              <AiOutlineMenu
+                className={`${scrollY > 0 ? "text-white" : "text-black"}`}
+              />
             </button>
             <ul
               tabindex={0}
@@ -92,8 +131,8 @@ const Navbar = ({ showDD, setShowDD }) => {
               >
                 <ImCross />
               </button>
-              <li>
-                <div class="p-0  relative mx-auto text-gray-600 lg:hidden btn btn-link no-underline md:flex">
+              <li className="flex justify-center">
+                <div class="p-0  relative mx-auto text-gray-600 lg:hidden btn btn-link no-underline md:flex ">
                   <input
                     class="border-2 border-gray-300 bg-white h-6 px-2  rounded-full text-xs md:w-full "
                     placeholder="Search"
@@ -121,27 +160,47 @@ const Navbar = ({ showDD, setShowDD }) => {
                   </button>
                 </div>
               </li>
-              <li className="mb-1 text-[10px] btn btn-sm btn-ghost rounded-none normal-case ">
+              <Link
+                href="/marketplace"
+                className="mb-1 text-[10px] btn btn-sm btn-ghost rounded-none normal-case "
+              >
                 Marketplace
-              </li>
-              <li className="my-1 text-[10px] btn btn-sm btn-ghost rounded-none normal-case ">
+              </Link>
+              <Link
+                href="/resources"
+                className="my-1 text-[10px] btn btn-sm btn-ghost rounded-none normal-case "
+              >
                 Resource
-              </li>
-              <li className="my-1 text-[10px] btn btn-sm btn-ghost rounded-none normal-case ">
+              </Link>
+              <Link
+                href="about"
+                className="my-1 text-[10px] btn btn-sm btn-ghost rounded-none normal-case "
+              >
                 About
-              </li>
-              <li className="my-1 text-[10px] btn btn-sm btn-primary rounded-none normal-case">
+              </Link>
+              <Link
+                href="upload"
+                className="my-1 text-[10px] btn btn-sm btn-primary rounded-none normal-case"
+              >
                 Upload
-              </li>
-              <li className="my-1 text-[10px] btn btn-sm btn-outline btn-primary rounded-none normal-case ">
+              </Link>
+              <Link
+                href="/wallet"
+                className="my-1 text-[10px] btn btn-sm btn-outline btn-primary rounded-none normal-case "
+              >
                 Connect Wallet
-              </li>
+              </Link>
             </ul>
           </div>
         </div>
-        <a className="text-violet-800 text-[18px] mr-1 font-extrabold lg:hidden p-[5%]">
+        <Link
+          href="/"
+          className={`text-[18px] mr-1 font-extrabold lg:hidden p-[5%] ${
+            scrollY > 0 ? "text-white" : "text-violet-800"
+          }`}
+        >
           NFTERS
-        </a>
+        </Link>
       </div>
     </div>
   );

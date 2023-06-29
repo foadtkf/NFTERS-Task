@@ -434,6 +434,8 @@ const DiscoverMoreNFT = () => {
                     className="rounded-full"
                     alt=""
                     style={{ position: "relative", zIndex: 1 }}
+                    data-aos="zoom-in-right"
+                    data-aos-duration="400"
                   />
                 </div>
                 <div className="relative -ml-[10px]">
@@ -444,6 +446,8 @@ const DiscoverMoreNFT = () => {
                     className="rounded-full"
                     alt=""
                     style={{ position: "relative", zIndex: 2 }}
+                    data-aos="zoom-in-right"
+                    data-aos-duration="300"
                   />
                 </div>
                 <div className="relative -ml-[10px]">
@@ -454,6 +458,8 @@ const DiscoverMoreNFT = () => {
                     className="rounded-full"
                     alt=""
                     style={{ position: "relative", zIndex: 3 }}
+                    data-aos="zoom-in-right"
+                    data-aos-duration="200"
                   />
                 </div>
                 <div className="relative -ml-[10px]">
@@ -464,6 +470,8 @@ const DiscoverMoreNFT = () => {
                     className="rounded-full"
                     alt=""
                     style={{ position: "relative", zIndex: 4 }}
+                    data-aos="zoom-in-right"
+                    data-aos-duration="100"
                   />
                 </div>
               </div>

@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { BiSolidUpArrowCircle } from "react-icons/bi";
 import ScrollToTop from "react-scroll-to-top";
+import Head from "next/head";
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
@@ -16,6 +17,10 @@ function MyApp({ Component, pageProps }) {
   });
   return (
     <>
+      <Head>
+        <title>NFTERS</title>
+        <link rel="icon" href="/li2.png" />
+      </Head>
       <ScrollToTop
         smooth
         component={

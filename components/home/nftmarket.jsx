@@ -94,7 +94,12 @@ const NFTMarket = () => {
   return (
     <div className="scroller-x-axes flex max-[1023px]:overflow-x-scroll md:flex-row flex-col md:px-[10%] gap-x-4 gap-y-4 py-[10%]">
       <div className="lg:w-[33%] max-[1023px]:min-w-[50%] max-[767px]:w-full  md:mx-0 px-[5%] md:px-0">
-        <Image src={leftimg} className="rounded-lg" alt="" />
+        <Image
+          src={leftimg}
+          className="rounded-lg"
+          data-aos="zoom-out"
+          alt=""
+        />
         <div className="pt-[5%]  flex justify-between">
           <div className="flex gap-x-2">
             <Image
@@ -125,7 +130,7 @@ const NFTMarket = () => {
       </div>
       <div className="lg:w-[33%] max-[1023px]:min-w-[60%] max-[767px]:w-full  flex flex-col gap-y-2 mx-auto items-center">
         {nftlist.map((item, index) => (
-          <div className="flex" key={index}>
+          <div className="flex" key={index} data-aos="fade-right">
             <Image
               src={item.img}
               height={147}
@@ -177,7 +182,7 @@ const NFTMarket = () => {
         </h4>
         <div className="flex flex-col gap-y-4">
           {collections.map((collection, index) => (
-            <div key={index} className="flex ">
+            <div key={index} className="flex " data-aos="fade-left">
               <h3 className="text-lg my-auto mr-2">{index + 1}</h3>
               <div className="indicator mr-2">
                 {collection.verified && (
