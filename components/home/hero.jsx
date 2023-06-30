@@ -98,7 +98,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-[50%] px-[1%] md:px-0">
+        <div className="w-full md:w-[50%] px-[1%] md:px-0 max-[767px]:pt-[5%]">
           <h1 className="text-[30px] lg:text-[40px] font-extrabold text-black">
             Discover, and collect Digital Art NFTs
           </h1>

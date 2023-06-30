@@ -37,14 +37,15 @@ const Navbar = ({ showDD, setShowDD }) => {
           <div class="navbar  hidden lg:block">
             <div class="navbar-center">
               <ul className="menu menu-horizontal px-1">
-                <Link
-                  href="/"
-                  className={` text-[24px] font-extrabold btn-sm my-auto  ${
-                    scrollY > 0 ? "text-white" : "text-violet-800"
+                <p
+                  className={` text-[24px] font-extrabold  my-auto  ${
+                    scrollY > 0
+                      ? "text-white shadow-xl shadow-violet-800"
+                      : "text-violet-800"
                   }`}
                 >
                   NFTERS
-                </Link>
+                </p>
                 <Link
                   href="/marketplace"
                   className={`btn btn-ghost text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case rounded-full ${
@@ -193,14 +194,17 @@ const Navbar = ({ showDD, setShowDD }) => {
             </ul>
           </div>
         </div>
-        <Link
-          href="/"
-          className={`text-[18px] mr-1 font-extrabold lg:hidden p-[5%] ${
-            scrollY > 0 ? "text-white" : "text-violet-800"
-          }`}
-        >
-          NFTERS
-        </Link>
+        <div className=" max-[767px]:p-[5%] ">
+          <p
+            className={`text-[18px] mr-1 font-extrabold lg:hidden relative ${
+              scrollY > 0
+                ? "text-white shadow-xl shadow-violet-800 px-[2%]"
+                : "text-violet-800"
+            }`}
+          >
+            NFTERS
+          </p>
+        </div>
       </div>
     </div>
   );
