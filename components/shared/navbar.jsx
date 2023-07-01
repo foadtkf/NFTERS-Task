@@ -4,6 +4,7 @@ import { ImCross } from "react-icons/im";
 import { useState } from "react";
 import useWindowScroll from "@react-hook/window-scroll";
 import Link from "next/link";
+import { useScramble } from "use-scramble";
 
 const Navbar = ({ showDD, setShowDD }) => {
   const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
@@ -23,6 +24,23 @@ const Navbar = ({ showDD, setShowDD }) => {
       setDrop(false);
     }
   };
+  const { ref, replay } = useScramble({
+    text: "NFTERS",
+    speed: 0.6,
+    tick: 1,
+    step: 1,
+    scramble: 4,
+    seed: 0,
+  });
+  useEffect(() => {
+    const interval = setInterval(() => {
+      replay();
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
   return (
     <div
       className="fixed w-full top-0 z-50"
@@ -43,9 +61,8 @@ const Navbar = ({ showDD, setShowDD }) => {
                       ? "text-white shadow-xl shadow-violet-800"
                       : "text-violet-800"
                   }`}
-                >
-                  NFTERS
-                </p>
+                  ref={ref}
+                ></p>
                 <Link
                   href="/marketplace"
                   className={`btn btn-ghost text-xs px-2 btn-sm xl:btn-sm xl:px-4 xl:text-xl my-auto normal-case rounded-full ${
@@ -197,9 +214,7 @@ const Navbar = ({ showDD, setShowDD }) => {
         <div className=" max-[767px]:p-[5%] ">
           <p
             className={`text-[18px] mr-1 font-extrabold lg:hidden relative ${
-              scrollY > 0
-                ? "text-white shadow-xl shadow-violet-800 px-[2%]"
-                : "text-violet-800"
+              scrollY > 0 ? "text-white shadow-xl  px-[2%]" : "text-violet-800"
             }`}
           >
             NFTERS
